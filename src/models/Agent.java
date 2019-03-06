@@ -2,7 +2,11 @@ package models;
 
 import utils.Utils;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public abstract class Agent extends Person{
+    private final static Logger LOGGER = Logger.getLogger("bank.agent");
 
     public Agent(String name, Double cc){
         super(name, cc);
@@ -12,28 +16,39 @@ public abstract class Agent extends Person{
         double current = client.getBalance();
         double value = client.getDepositValue();
         client.setBalance( current + value);
-        System.out.println("Para un deposito: \n\tbalance: "+current+"\n\tdeposito: "+value+"\n\tdespues: "+client.getBalance());
+        String message = "To deposit: \n\tbalance: \t"+current+"\n\tdeposit value: \t"+value+"\n\tnew balance: \t"+client.getBalance();
+        writeOnLog(message);
     }
 
     public boolean withdrawal(Client client){
         double current = client.getBalance();
         double value = client.getWithdrawalValue();
+        boolean isEnough = false;
+        String message = "F - ";
         if(current >= value){
             client.setBalance(current - value);
-            System.out.println("T - Para un retiro: \n\tbalance: "+current+"\n\tretiro: "+value+"\n\tdespues: "+client.getBalance());
-            return true;
+            message = "T - ";
+            isEnough = true;
         }
-        System.out.println("F - Para un retiro: \n\tbalance: "+current+"\n\tretiro: "+value+"\n\tdespues: "+client.getBalance());
-        return false;
+        message +="To withdrawal: \n\tbalance: \t"+current+"\n\twithdrawal value: \t"+value+"\n\tnew balance: \t"+client.getBalance();
+        writeOnLog(message);
+        return isEnough;
     }
 
     public boolean resolveIssue(){
         boolean isSolved = Utils.generateRandomBoolean();
-        System.out.println("Para un issue: \n\tresuelto: "+isSolved);
+        String message = "To solve issue: \n\tsolved: "+isSolved;
+        writeOnLog(message);
         return isSolved;
     }
 
-    public void attend(Client client){
+    public void attendTime() throws InterruptedException {
+        int milliseconds = Utils.generateRandomInt(10000, 15000);
+        Thread.sleep(milliseconds);
+    }
+
+    public void attend(Client client) throws InterruptedException {
+        attendTime();
         switch (client.getBankOperation()){
             case DEPOSIT:
                 deposit(client);
@@ -46,6 +61,10 @@ public abstract class Agent extends Person{
                 break;
             default:
         }
+    }
+
+    public void writeOnLog(String message){
+        LOGGER.log(Level.INFO, "\n"+message);
     }
 
     public abstract int getPriority();

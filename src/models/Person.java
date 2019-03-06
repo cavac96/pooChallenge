@@ -1,10 +1,10 @@
 package models;
 
-public class Person {
+public abstract class Person {
     protected String name;
-    protected Double cc;
+    protected double cc;
 
-    public Person(String name, Double cc) {
+    public Person(String name, double cc) {
         this.name = name;
         this.cc = cc;
     }
