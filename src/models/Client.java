@@ -1,12 +1,10 @@
 package models;
 
 import enunms.Operation;
-
 import java.util.Optional;
-import java.util.Random;
+import utils.Utils;
 
 public class Client extends Person {
-
     private double balance;
     private Operation bankOperation;
     private Optional<Double> depositValue;
@@ -16,46 +14,7 @@ public class Client extends Person {
         super(name, cc);
         generateRandomBalance();
         chooseBankOperation();
-        checkAditionalValues();
-    }
-
-    public void chooseBankOperation(){
-        Random random = new Random();
-        int index = random.nextInt((3 - 1) + 1) + 1;
-        this.bankOperation = Operation.values()[index-1];
-    }
-
-    public void checkAditionalValues(){
-        if(bankOperation == Operation.DEPOSIT)
-            generateRandomDepositValue();
-        else if(bankOperation == Operation.WITHDRAWL)
-            generateWithdrawalValue();
-    }
-
-    public double getBalance(){
-        return balance;
-    }
-
-    public void setBalance(double balance){
-        this.balance = balance;
-    }
-
-    private void generateRandomBalance(){
-        Random random = new Random();
-        double x = 10000 + (1000000 - 10000) * random.nextDouble();
-        this.balance = x;
-    }
-
-    public void generateRandomDepositValue(){
-        Random random = new Random();
-        double x = 10000 + (1000000 - 10000) * random.nextDouble();
-        this.depositValue = Optional.of(x);
-    }
-
-    public void generateWithdrawalValue(){
-        Random random = new Random();
-        double x = 50000 + (1000000 - 50000) * random.nextDouble();
-        this.withdrawalValue = Optional.of(x);
+        checkAdditionalValues();
     }
 
     public double getDepositValue(){
@@ -70,4 +29,37 @@ public class Client extends Person {
     public Operation getBankOperation() {
         return bankOperation;
     }
+
+    public double getBalance(){
+        return balance;
+    }
+
+    public void setBalance(double balance){
+        this.balance = balance;
+    }
+
+    public void chooseBankOperation(){
+        int index = Utils.generateRandomInt(1, 3);
+        this.bankOperation = Operation.values()[index-1];
+    }
+
+    public void checkAdditionalValues(){
+        if(bankOperation == Operation.DEPOSIT)
+            generateRandomDepositValue();
+        else if(bankOperation == Operation.WITHDRAWL)
+            generateWithdrawalValue();
+    }
+
+    private void generateRandomBalance(){
+        this.balance = Utils.generateRandomDouble(10000, 1000000);
+    }
+
+    public void generateRandomDepositValue(){
+        this.depositValue = Optional.of(Utils.generateRandomDouble(10000, 1000000));
+    }
+
+    public void generateWithdrawalValue(){
+        this.withdrawalValue = Optional.of(Utils.generateRandomDouble(50000, 1000000));
+    }
+
 }

@@ -1,6 +1,6 @@
 package models;
 
-import java.util.Random;
+import utils.Utils;
 
 public abstract class Agent extends Person{
 
@@ -28,8 +28,7 @@ public abstract class Agent extends Person{
     }
 
     public boolean resolveIssue(){
-        Random random = new Random();
-        boolean isSolved = random.nextBoolean();
+        boolean isSolved = Utils.generateRandomBoolean();
         System.out.println("Para un issue: \n\tresuelto: "+isSolved);
         return isSolved;
     }

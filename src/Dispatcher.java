@@ -1,7 +1,6 @@
 import models.Agent;
 import models.Client;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -9,10 +8,18 @@ import java.util.Queue;
 public class Dispatcher {
     private Queue<Agent> agents;
     private Queue<Client> clients;
+    private static Dispatcher dispatcher;
 
-    public Dispatcher() {
+    private Dispatcher() {
         this.agents = new PriorityQueue<>(new AgentComparator());
         this.clients = new LinkedList<>();
+    }
+
+    public static Dispatcher getDispatcherInstance(){
+        if(dispatcher == null){
+            dispatcher = new Dispatcher();
+        }
+        return dispatcher;
     }
 
     public void addClient(Client client){

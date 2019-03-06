@@ -3,7 +3,7 @@ import models.*;
 public class BankSystem {
 
     public static void main(String[] args) {
-        Dispatcher dispatcher = new Dispatcher();
+        Dispatcher dispatcher = Dispatcher.getDispatcherInstance();
 
 
         Agent a = new Director("d1", 1.0);
@@ -31,7 +31,7 @@ public class BankSystem {
 
         client1 = new Client("Camila5", 1.0);
         dispatcher.addClient(client1);
-        
+
 
         //R1.start();
 
