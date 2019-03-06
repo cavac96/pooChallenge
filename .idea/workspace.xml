@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f35489aa-2c64-4cd4-bbe7-62a3b40a1f3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AgentFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/builders/AgentBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/builders/CashierBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/builders/ClientBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/builders/DirectorBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/builders/SupervisorBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pooChallenge/BankSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pooChallenge/BankSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pooChallenge/Dispatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pooChallenge/Dispatcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pooChallenge/models/Agent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pooChallenge/models/Agent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pooChallenge/models/Cashier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pooChallenge/models/Cashier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pooChallenge/models/Director.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pooChallenge/models/Director.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/pooChallenge/models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pooChallenge/models/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BankSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Cashier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Cashier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Director.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Person.java" afterDir="false" />
-    </list>
+    <list default="true" id="f35489aa-2c64-4cd4-bbe7-62a3b40a1f3a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,20 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/BankSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -78,9 +45,9 @@
         <option value="$PROJECT_DIR$/src/builders/ClientBuilder.java" />
         <option value="$PROJECT_DIR$/src/utils/Utils.java" />
         <option value="$PROJECT_DIR$/src/models/Person.java" />
-        <option value="$PROJECT_DIR$/src/BankSystem.java" />
         <option value="$PROJECT_DIR$/src/Dispatcher.java" />
         <option value="$PROJECT_DIR$/src/models/Agent.java" />
+        <option value="$PROJECT_DIR$/src/BankSystem.java" />
       </list>
     </option>
   </component>
@@ -141,7 +108,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551904172626" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551906507937" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -184,9 +151,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -196,7 +162,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.04390935" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.07223796" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -383,8 +349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BankSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        <state relative-caret-position="680">
+          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
