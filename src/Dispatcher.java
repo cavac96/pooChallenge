@@ -17,17 +17,18 @@ public class Dispatcher {
 
     public void addClient(Client client){
         clients.add(client);
-        attend(client.getBankOperation());
+        attend(client);
     }
 
     public void addAgent(Agent agent){
         agents.add(agent);
     }
 
-    public void attend(int bankOperation){
-        Iterator itr = agents.iterator();
-        while (itr.hasNext()){
-            System.out.println((Agent)itr.next());
-        }
+    public void attend(Client client) {
+        agents.poll().attend(client);
+
+//        while (!agents.isEmpty()) {
+//            System.out.println(agents.poll().getName());
+//        }
     }
 }

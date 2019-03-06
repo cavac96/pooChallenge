@@ -8,4 +8,12 @@ public class Person {
         this.name = name;
         this.cc = cc;
     }
+
+    public Double getCc() {
+        return cc;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

@@ -8,6 +8,6 @@ public class Director extends Agent{
 
     @Override
     public int getPriority() {
-        return 0;
+        return priority;
     }
 }

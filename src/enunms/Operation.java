@@ -1,5 +1,5 @@
 package enunms;
 
-public enum Operations {
+public enum Operation {
     DEPOSIT, WITHDRAWL, ISSUE;
 }
